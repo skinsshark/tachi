@@ -65,7 +65,7 @@
     let yPos = window.scrollY;
     console.log(yPos)
     flip.style.backgroundPosition = `
-      calc(-${imageWidth}px * ${Math.floor(yPos / (imageWidth * 2))}) 0
+      calc(-${imageWidth}px * ${Math.floor(yPos / (imageWidth / 3))}) 0
     `;
 
     if (yPos > 9400) {
