@@ -7,11 +7,23 @@
       min-height: 11000px;
     }
 
-    @media only screen and (max-width: 600px) {
+    /* @media only screen and (max-width: 600px) {
       body {
         zoom: 0.6;
         margin-top: calc(40vh);
         min-height: 20000px;
+      }
+    } */
+
+    @media only screen and (max-width: 787px) {
+      html {
+        padding: 30px;
+      }
+      html::before {
+        content: 'Desktop Experience 0nly';
+      }
+      body {
+        display: none;
       }
     }
 
