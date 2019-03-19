@@ -1,0 +1,54 @@
+<html>
+<head>
+  <title>TACHI</title>
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
+  <style type="text/css">
+    body {
+      min-height: 11000px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      body {
+        zoom: 0.6;
+        margin-top: calc(40vh);
+        min-height: 20000px;
+      }
+    }
+
+    #flip {
+      position: fixed;
+      width: calc(1377px / 3);
+      height: calc(871px / 3);
+      margin: 5% auto;
+      left: 0;
+      right: 0;
+      background-size: cover;
+      background-image: url('./background.png');
+    }
+
+    h1 {
+      margin-top: 40vh;
+    }
+  </style>
+</head>
+<body>
+  <div id="flip" />
+  <h1>(七) T A C H I</h1>
+</body>
+<script type="text/javascript">
+  const flip = document.getElementById('flip');
+  const imageWidth = 1377 / 3;
+
+  window.onscroll = function() {
+    let yPos = window.scrollY;
+    console.log(yPos)
+    flip.style.backgroundPosition = `
+      calc(-${imageWidth}px * ${Math.floor(yPos / (imageWidth * 2))}) 0
+    `;
+
+    if (yPos > 9400) {
+      window.scroll(0,0);
+    }
+  }
+</script>
+</html>
