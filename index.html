@@ -15,6 +15,7 @@
   <style type="text/css">
     body {
       min-height: 11000px;
+      padding-top: 10vh;
     }
 
     /* @media only screen and (max-width: 600px) {
@@ -26,36 +27,60 @@
     } */
 
     @media only screen and (max-width: 787px) {
+      * {
+        display: none;
+      }
+
       html {
         padding: 30px;
+        display: block;
+        overflow: hidden;
       }
+
       html::before {
         content: 'Desktop Experience 0nly';
       }
-      body {
-        display: none;
-      }
+    }
+
+    body,
+    main {
+      display: flex;
+      justify-content: center;
+    }
+
+    main {
+      align-items: center;
+      position: fixed;
+      padding: 60px 70px 70px;
+      width: calc(1377px / 3);
+      height: calc(871px / 3);
+    }
+
+    main img {
+      position: absolute;
+      top: 0;
     }
 
     #flip {
-      position: fixed;
+      top: 0;
       width: calc(1377px / 3);
       height: calc(871px / 3);
-      margin: 5% auto;
-      left: 0;
-      right: 0;
       background-size: cover;
       background-image: url('./background.png');
     }
 
     h1 {
-      margin-top: 40vh;
+      margin-top: 60vh;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <div id="flip" />
-  <h1>(七) T A C H I</h1>
+  <main>
+    <img src="./frame.png" width="95%" />
+    <div id="flip" />
+    <h1>(七) T A C H I</h1>
+  </main>
 </body>
 <script type="text/javascript">
   const flip = document.getElementById('flip');
@@ -68,7 +93,7 @@
       calc(-${imageWidth}px * ${Math.floor(yPos / (imageWidth / 3))}) 0
     `;
 
-    if (yPos > 9400) {
+    if (yPos > 9150) {
       window.scroll(0,0);
     }
   }
