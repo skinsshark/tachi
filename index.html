@@ -11,90 +11,48 @@
   </script>
 
   <title>TACHI</title>
+  <link href="./style.css" rel="stylesheet">
   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
-  <style type="text/css">
-    body {
-      min-height: 11000px;
-      padding-top: 10vh;
-    }
-
-    /* @media only screen and (max-width: 600px) {
-      body {
-        zoom: 0.6;
-        margin-top: calc(40vh);
-        min-height: 20000px;
-      }
-    } */
-
-    @media only screen and (max-width: 787px) {
-      * {
-        display: none;
-      }
-
-      html {
-        padding: 30px;
-        display: block;
-        overflow: hidden;
-      }
-
-      html::before {
-        content: 'Desktop Experience 0nly';
-      }
-    }
-
-    body,
-    main {
-      display: flex;
-      justify-content: center;
-    }
-
-    main {
-      align-items: center;
-      position: fixed;
-      padding: 60px 70px 70px;
-      width: calc(1377px / 3);
-      height: calc(871px / 3);
-    }
-
-    main img {
-      position: absolute;
-      top: 0;
-    }
-
-    #flip {
-      top: 0;
-      width: calc(1377px / 3);
-      height: calc(871px / 3);
-      background-size: cover;
-      background-image: url('./background.png');
-    }
-
-    h1 {
-      margin-top: 60vh;
-      text-align: center;
-    }
-  </style>
 </head>
 <body>
+  <h1>(七) T A C H I</h1>
   <main>
     <img src="./frame.png" width="95%" />
-    <div id="flip" />
-    <h1>(七) T A C H I</h1>
+    <div id="sliced">
+      <div class="slice" />
+      <div class="slice" />
+      <div class="slice" />
+      <div class="slice" />
+      <div class="slice" />
+      <div class="slice" />
+      <div class="slice" />
+      <div class="slice" />
+      <div class="slice" />
+      <div class="slice" />
+      <div class="slice" />
+    </div>
+    <div id="original" />
   </main>
 </body>
 <script type="text/javascript">
-  const flip = document.getElementById('flip');
+  const original = document.getElementById('original');
   const imageWidth = 1377 / 3;
 
   window.onscroll = function() {
     let yPos = window.scrollY;
-    console.log(yPos)
-    flip.style.backgroundPosition = `
-      calc(-${imageWidth}px * ${Math.floor(yPos / (imageWidth / 3))}) 0
+    const imgX = `
+      calc(-${imageWidth}px * ${Math.floor(yPos / (imageWidth / 3))})
     `;
+    let imgY;
 
-    if (yPos > 9150) {
-      window.scroll(0,0);
+    if (yPos > 3200) {
+      imgY = `calc(${(yPos - 3000) / 50}px)`;
+    }
+
+    original.style.backgroundPosition = `${imgX} 0`;
+
+    if (yPos < 20000) {
+      original.style.marginTop = imgY || 0;
     }
   }
 </script>

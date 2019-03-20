@@ -1,0 +1,76 @@
+body {
+  min-height: 25000px;
+  padding-top: 10vh;
+}
+
+@media only screen and (max-width: 787px) {
+  body * {
+    display: none;
+  }
+
+  html {
+    padding: 30px;
+    overflow: hidden;
+  }
+
+  html::before {
+    content: 'Desktop Experience 0nly';
+  }
+}
+
+h1 {
+  display: none;
+  /* position: fixed;
+  text-align: center; */
+}
+
+body,
+main {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  align-items: center;
+  position: fixed;
+  padding: 60px 70px 70px;
+  width: calc(1377px / 3);
+  height: calc(871px / 3);
+}
+
+main img {
+  position: absolute;
+  top: 0;
+}
+
+#original {
+  width: calc(1377px / 3);
+  height: calc(871px / 3);
+  background-size: cover;
+  background-image: url('./background.png');
+}
+
+/* #sliced .slice {
+  background-position: top center;
+  border: 1px solid red;
+  background-image: url('./background.png');
+}
+
+#sliced {
+  display: grid;
+  grid-column-gap: 3px;
+  grid-template-columns: repeat(11, 1fr);
+  position: absolute;
+}
+
+#sliced .slice:nth-child(1){ background-position: 0% 0%; }
+#sliced .slice:nth-child(2){ background-position: 10% 0%; }
+#sliced .slice:nth-child(3){ background-position: 20% 0%; }
+#sliced .slice:nth-child(4){ background-position: 30% 0%; }
+#sliced .slice:nth-child(5){ background-position: 40% 0%; }
+#sliced .slice:nth-child(6){ background-position: 50% 0%; }
+#sliced .slice:nth-child(7){ background-position: 60% 0%; }
+#sliced .slice:nth-child(8){ background-position: 70% 0%; }
+#sliced .slice:nth-child(9){ background-position: 80% 0%; }
+#sliced .slice:nth-child(10){ background-position: 90% 0%; }
+#sliced .slice:nth-child(11){ background-position: 100% 0%; } */
