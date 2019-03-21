@@ -1,12 +1,12 @@
 body {
   min-height: 21500px;
-  padding-top: 10vh;
+  padding-top: 66px;
   background-color: #eee;
   display: flex;
   justify-content: center;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 650px) {
   main {
     zoom: 0.55;
   }
@@ -39,7 +39,7 @@ article {
 article {
   z-index: 99999;
   width: calc((1377px / 3) * 2.1);
-  top: 50vh;
+  top: 350px;
 }
 
 main {
@@ -81,7 +81,7 @@ aside img {
   width: 20%;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 650px) {
   section {
     flex-direction: column;
     padding: 0;
@@ -117,7 +117,7 @@ aside img {
   width: 8px;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 650px) {
   .slices {
     top: 307px;
   }
