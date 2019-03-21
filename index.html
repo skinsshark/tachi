@@ -9,50 +9,76 @@
 
     gtag('config', 'UA-75770644-13');
   </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>TACHI</title>
+
   <link href="./style.css" rel="stylesheet">
   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
 </head>
 <body>
-  <h1>(七) T A C H I</h1>
-  <main>
-    <img src="./frame.png" width="95%" />
-    <div id="sliced">
-      <div class="slice" />
-      <div class="slice" />
-      <div class="slice" />
-      <div class="slice" />
-      <div class="slice" />
-      <div class="slice" />
-      <div class="slice" />
-      <div class="slice" />
-      <div class="slice" />
-      <div class="slice" />
-      <div class="slice" />
-    </div>
-    <div id="original" />
-  </main>
+  <article>
+    <aside>
+      <img src="./camera.png" />
+      <p>No Flash <br/>Photography</p>
+    </aside>
+    <footer>
+      <h1>(七) TACHI, <span>2019</span></h1>
+      <p>iPhone X image on screen</p>
+    </footer>
+  </article>
+  <section>
+    <main>
+      <img src="./frame.png" />
+      <div id="fish" />
+    </main>
+  </section>
+  <div class="slices">
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+  </div>
 </body>
 <script type="text/javascript">
-  const original = document.getElementById('original');
+  const fish = document.getElementById('fish');
   const imageWidth = 1377 / 3;
 
   window.onscroll = function() {
     let yPos = window.scrollY;
     const imgX = `
-      calc(-${imageWidth}px * ${Math.floor(yPos / (imageWidth / 3))})
+      calc(-${imageWidth}px * ${Math.floor(yPos / (imageWidth / 1.3))})
     `;
     let imgY;
 
     if (yPos > 3200) {
       imgY = `calc(${(yPos - 3000) / 50}px)`;
     }
+console.log(yPos)
+    fish.style.backgroundPosition = `${imgX} 0`;
 
-    original.style.backgroundPosition = `${imgX} 0`;
-
-    if (yPos < 20000) {
-      original.style.marginTop = imgY || 0;
+    if (yPos < 10500) {
+      fish.style.marginTop = imgY || 0;
     }
   }
 </script>
