@@ -31,7 +31,7 @@
   <section>
     <main>
       <img src="./frame.png" />
-      <div id="fish" />
+      <div class="wait" id="fish" />
     </main>
   </section>
   <div class="slices">
@@ -62,6 +62,13 @@
 </body>
 <script type="text/javascript">
   const fish = document.getElementById('fish');
+
+  const x = document.createElement("IMG");
+  x.setAttribute("src", "./background.png");
+  x.addEventListener("load", () => {
+    fish.classList.remove('wait');
+  })
+
   const imageWidth = 1377 / 3;
   window.onbeforeunload = function () {
     window.scrollTo(0, 0);
