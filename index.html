@@ -80,7 +80,9 @@
   });
 
   frame.addEventListener("load", () => {
-    frame.classList.remove('wait');
+    setTimeout(() => {
+      frame.classList.remove('wait');
+    }, 1500);
   });
 
   const imageWidth = 1377 / 3;
