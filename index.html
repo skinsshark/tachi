@@ -31,7 +31,11 @@
   <section>
     <main>
       <img src="./frame.png" />
-      <div class="wait" id="fish" />
+      <div class="wait" id="fish"></div>
+      <div class="waiting" id="waiting">
+        <br/><br/><br/><br/><br/>
+        Loading...
+      </div>
     </main>
   </section>
   <div class="slices">
@@ -62,11 +66,17 @@
 </body>
 <script type="text/javascript">
   const fish = document.getElementById('fish');
+  const waiting = document.getElementById('waiting');
 
   const x = document.createElement("IMG");
   x.setAttribute("src", "./background.png");
   x.addEventListener("load", () => {
-    fish.classList.remove('wait');
+    waiting.classList.add('wait');
+    waiting.classList.remove('waiting');
+    setTimeout(() => {
+      fish.classList.remove('wait');
+    }, 500)
+
   })
 
   const imageWidth = 1377 / 3;

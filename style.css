@@ -2,6 +2,11 @@
   display: none;
 }
 
+.waiting {
+  line-height: 50px;
+  text-align: center;
+}
+
 body {
   min-height: 21500px;
   padding-top: 66px;
