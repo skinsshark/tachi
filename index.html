@@ -30,7 +30,7 @@
   </article>
   <section>
     <main>
-      <img src="./frame.png" />
+      <img class="wait" src="./frame.png" id="frame" />
       <div class="wait" id="fish"></div>
       <div class="waiting" id="waiting">
         <br/><br/>
@@ -66,6 +66,7 @@
 </body>
 <script type="text/javascript">
   const fish = document.getElementById('fish');
+  const frame = document.getElementById('frame');
   const waiting = document.getElementById('waiting');
 
   const x = document.createElement("IMG");
@@ -75,9 +76,12 @@
     waiting.classList.remove('waiting');
     setTimeout(() => {
       fish.classList.remove('wait');
-    }, 500)
+    }, 500);
+  });
 
-  })
+  frame.addEventListener("load", () => {
+    frame.classList.remove('wait');
+  });
 
   const imageWidth = 1377 / 3;
   window.onbeforeunload = function () {
