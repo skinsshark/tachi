@@ -89,7 +89,8 @@
   }
 
   window.onscroll = function() {
-    let yPos = window.scrollY;
+    let yPos = Math.ceil(window.scrollY / imageWidth) * imageWidth;
+
     let calculation = (imageWidth * Math.floor(yPos / imageWidth)) % (13770/3);
     fish.style.backgroundPosition = `
       -${calculation}px 0
