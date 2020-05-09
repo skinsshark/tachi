@@ -90,7 +90,7 @@
   }
 
   window.onscroll = function() {
-    let yPos = Math.ceil(window.scrollY / imageWidth) * imageWidth;
+    let yPos = window.scrollY;
 
     let calculation = (imageWidth * Math.floor(yPos / imageWidth)) % (13770/3);
     fish.style.backgroundPosition = `
@@ -100,11 +100,11 @@
     let imgY;
 
     if (yPos > 3200) {
-      imgY = `calc(${(yPos - 3000) / 50}px)`;
+      imgY = `translateY(${Math.round((yPos - 3000) / 50)}px)`;
     }
 
     if (yPos < 10500) {
-      fish.style.marginTop = imgY || 0;
+      fish.style.transform = imgY || 'translateY(0)';
     }
   }
 </script>
