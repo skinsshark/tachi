@@ -1,111 +1,144 @@
 <html>
-<head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75770644-13"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-75770644-13"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
 
-    gtag('config', 'UA-75770644-13');
-  </script>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      gtag('config', 'UA-75770644-13');
+    </script>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-  <title>TACHI</title>
+    <meta name="description" content="Tachi Toronto 2019" />
 
-  <link href="./style.css" rel="stylesheet">
-  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
-</head>
-<body>
-  <article>
-    <aside>
-      <img src="./camera.png" />
-      <p>No Flash <br/>Photography</p>
-    </aside>
-    <footer>
-      <h1>(七) TACHI, <span>2019</span></h1>
-      <p>iPhone X image on screen</p>
-      <br/><p><b>Scroll to Enjoy</b></p>
-    </footer>
-  </article>
-  <section>
-    <main>
-      <img class="wait" src="./frame.png" id="frame" />
-      <div class="wait" id="fish"></div>
-      <div class="waiting" id="waiting">
-        <br/><br/>
-        Loading...
-      </div>
-    </main>
-  </section>
-  <div class="slices">
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-  </div>
-</body>
-<script type="text/javascript">
-  const fish = document.getElementById('fish');
-  const frame = document.getElementById('frame');
-  const waiting = document.getElementById('waiting');
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://sharonzheng.com/tachi/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Tachi" />
+    <meta property="og:description" content="Tachi Toronto 2019" />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/skinsshark/tachi/refs/heads/master/preview.png"
+    />
 
-  const x = document.createElement("IMG");
-  x.setAttribute("src", "./background.png");
-  x.addEventListener("load", () => {
-    waiting.classList.add('wait');
-    waiting.classList.remove('waiting');
-    setTimeout(() => {
-      fish.classList.remove('wait');
-    }, 500);
-  });
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="sharonzheng.com" />
+    <meta property="twitter:url" content="https://sharonzheng.com/tachi/" />
+    <meta name="twitter:title" content="Tachi" />
+    <meta name="twitter:description" content="Tachi Toronto 2019" />
+    <meta
+      name="twitter:image"
+      content="https://raw.githubusercontent.com/skinsshark/tachi/refs/heads/master/preview.png"
+    />
 
-  frame.addEventListener("load", () => {
-    frame.classList.remove('wait');
-  });
+    <title>Tachi</title>
 
-  const imageWidth = 1377 / 3;
-  window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-  }
+    <link href="./style.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <article>
+      <aside>
+        <img src="./camera.png" />
+        <p>No Flash <br />Photography</p>
+      </aside>
+      <footer>
+        <h1>(七) TACHI, <span>2019</span></h1>
+        <p>iPhone X image on screen</p>
+        <br />
+        <p><b>Scroll to Enjoy</b></p>
+      </footer>
+    </article>
+    <section>
+      <main>
+        <img class="wait" src="./frame.png" id="frame" />
+        <div class="wait" id="fish"></div>
+        <div class="waiting" id="waiting">
+          <br /><br />
+          Loading...
+        </div>
+      </main>
+    </section>
+    <div class="slices">
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+    </div>
+  </body>
+  <script type="text/javascript">
+    const fish = document.getElementById('fish');
+    const frame = document.getElementById('frame');
+    const waiting = document.getElementById('waiting');
 
-  window.onscroll = function() {
-    let yPos = window.scrollY;
+    const x = document.createElement('IMG');
+    x.setAttribute('src', './background.png');
+    x.addEventListener('load', () => {
+      waiting.classList.add('wait');
+      waiting.classList.remove('waiting');
+      setTimeout(() => {
+        fish.classList.remove('wait');
+      }, 500);
+    });
 
-    let calculation = (imageWidth * Math.floor(yPos / imageWidth)) % (13770/3);
-    fish.style.backgroundPosition = `
+    frame.addEventListener('load', () => {
+      frame.classList.remove('wait');
+    });
+
+    const imageWidth = 1377 / 3;
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    };
+
+    window.onscroll = function () {
+      let yPos = window.scrollY;
+
+      let calculation =
+        (imageWidth * Math.floor(yPos / imageWidth)) % (13770 / 3);
+      fish.style.backgroundPosition = `
       -${calculation}px 0
     `;
 
-    let imgY;
+      let imgY;
 
-    if (yPos > 3200) {
-      imgY = `translateY(${Math.round((yPos - 3000) / 50)}px)`;
-    }
+      if (yPos > 3200) {
+        imgY = `translateY(${Math.round((yPos - 3000) / 50)}px)`;
+      }
 
-    if (yPos < 10500) {
-      fish.style.transform = imgY || 'translateY(0)';
-    }
-  }
-</script>
+      if (yPos < 10500) {
+        fish.style.transform = imgY || 'translateY(0)';
+      }
+    };
+  </script>
 </html>
